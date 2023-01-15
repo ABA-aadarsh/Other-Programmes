@@ -1,0 +1,6 @@
+To run this project
+1. copy this to-do-list folder to D:/xampp/htdocs
+2. open xamp and run apache and mysql
+3. then in browser enter "localhost/To-do-list"
+
+this is because the database for this project is saved in mysql

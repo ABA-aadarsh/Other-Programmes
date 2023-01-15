@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <!-- my stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+            <h2>member login</h2>
+            <form action="file.php" method="post">
+                <div class="input-box" >
+                    <i class="fa fa-user"></i>
+                    <input type="email" name="email" placeholder="Email address">
+                </div>
+                <div class="input-box" >
+                    <i class="fa fa-lock"></i>
+                    <input type="password" name="password" placeholder="Password">
+                </div>
+                <button class="login" type="submit">Login</button>
+            </form>
+            <a class="forgot-pw" href="#">
+                <p>Forgot Password?</p>
+                <i class="fa fa-angle-double-right motion-icon"></i>
+            </a>
+        </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>
