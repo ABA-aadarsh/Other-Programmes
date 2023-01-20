@@ -1,0 +1,8 @@
+Projects To do (on priority order):
+Canvas Tutorial Project
+Naruto
+3d Calculator
+// Learn NodeJs
+Zoom Clone
+Pong-Multiplayer
+Metal Knight-Multi Player

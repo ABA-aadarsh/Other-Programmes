@@ -1,0 +1,52 @@
+class Sprite{
+    constructor({imgsrc,position,motion=false,frameRate=1}){
+        this.position=position
+        this.frameRate=frameRate
+        this.image=new Image()
+        this.image.src=imgsrc
+        this.loaded=false
+        this.image.onload=()=>{
+            this.loaded=true
+            this.width=this.image.width/this.frameRate
+            this.height=this.image.height
+        }
+        this.currentFrame=0 //initially
+        this.buffer=5
+        this.runTime=1
+        this.motion=motion
+    }
+    draw(){
+        if(this.loaded==true){
+            const cropBox={
+                position:{
+                    x:this.width*this.currentFrame,
+                    y:0
+                },
+                width:this.width,
+                height:this.height
+            }
+            if(this.motion==true){
+                this.runTime++
+                if(this.runTime%this.buffer==0){
+                    if(this.currentFrame<this.frameRate-1){
+                        this.currentFrame++;
+                    }else{
+                        this.currentFrame=0
+                    }
+                    this.runTime=1
+                }
+            }
+            c.drawImage(
+                this.image,
+                cropBox.position.x,
+                cropBox.position.y,
+                cropBox.width,
+                cropBox.height,
+                this.position.x,
+                this.position.y,
+                this.width,
+                this.height
+            )
+        }
+    }
+}
